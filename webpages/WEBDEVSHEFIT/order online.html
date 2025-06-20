@@ -4,31 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coffee Shop Menu</title>
+    <link rel="stylesheet" href="Style.CSS">
 </head>
-<body>
-    <h1>Welcome to Bambu Coffee Shop</h1>
-    <h2><Menu</h2>
-
-    <h3>Coffee</h3>
+<body> <nav>
     <ul>
-        <img src="pictures/jir93cii.png"width="400">
-        <li>Espresso-R34.99</li>
-        <img src="pictures/cappuccino1.webp"width="400">
-        <li>Cuppuccino-R49.80</li>
-        <img src="pictures/GJDmKr3_TS3Qpm6KEL9UKUQKUO4.jpg">
-        <li>Latte-R29.50</li>
-         <img src="pictures/special drink.jpg">
-        <li>spcial drinks-R25.00 each </li>
-        <img src="pictures/l-intro-1670602155.jpg"width="400">
-        <li>sneaks- R24.50 each</li>
-    </ul>
-
-    <h3>Teas</h3>
-    <ul>
-        <li>Roobos-R12.50</li>
-        <li>Green Tea-R24.99</li>
-        <li>Herbal Tea-R22.50</li>
+        <li><a href="index.html">index</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="inquiries.html">Inquiries</a></li>
+        <li><a href="services.html">Services</a></li> 
+        <li><a href="Submit.html">submit</a></li>
     </ul>
     
-</body>
-</html>
+    <h1>Welcome to Bambu Coffee Shop</h1>
+    <h2><Menu</h2>
+   <h3>Coffee</h3>
+    <ul><!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Bambu Coffee Shop Services</title>
+            <script>
+                function showPopup() {
+                    alert("Thank you for your order! We will process it shortly.");
+                }
+            </script>
+        </head>
+        <body>
+        
+        <h1>Bambu Coffee Shop Services</h1>
+        
+        <h3>Coffee</h3>
+        <ul>
+            <li>
+                <img src="pictures/jir93cii.png" width="400" alt="Espresso">
+                Espresso - R34.99
+            </li>
+            <li>
+                <img src="pictures/cappuccino1.webp" width="400" alt="Cappuccino">
+                Cappuccino - R49.80
+            </li>
+            <li>
+                <img src="pictures/GJDmKr3_TS3Qpm6KEL9UKUQKUO4.jpg" width="400" alt="Latte">
+                Latte - R29.50
+            </li>
+            <li>
+                <img src="pictures/special drink.jpg" width="400" alt="Special Drinks">
+                Special Drinks - R25.00 each
+            </li>
+            <li>
+                <img src="pictures/l-intro-1670602155.jpg" width="400" alt="Snacks">
+                Snacks - R24.50 each
+            </li>
+        </ul>
+        
+        <h3>Teas</h3>
+        <ul>
+            <li>Rooibos - R12.50</li>
+            <li>Green Tea - R24.99</li>
+            <li>Herbal Tea - R22.50</li>
+        </ul>
+        
+        <h2>Order Form</h2>
+        <form onsubmit="showPopup(); return false;">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label for="address">Delivery Address:</label>
+            <input type="text" id="address" name="address" required>
+            <br>
+            <label for="coffee">Select Coffee:</label>
+            <select id="coffee" name="coffee" required>
+                <option value="Espresso">Espresso - R34.99</option>
+                <option value="Cappuccino">Cappuccino - R49.80</option>
+                <option value="Latte">Latte - R29.50</option>
+                <option value="Special Drinks">Special Drinks - R25.00 each</option>
+                <option value="Snacks">Snacks - R24.50 each</option>
+            </select>
+            <br>
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+            <br>
+            <button type="submit">Place Order</button>
+        </form>
+        
+        <footer>
+            <div class="footer-content">
+                <p>&copy; Bambu Coffee Shop. All rights reserved.</p>
+            </div>
+        </footer>
+        
+        </body>
+        </html>
+        
+    
+      

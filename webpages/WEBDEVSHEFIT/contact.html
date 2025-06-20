@@ -4,35 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>homepage</title>
+    <link rel="stylesheet" href="Style.CSS">
+    <link rel="stylesheet" href="javascript.js">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Material+Icons"
+  rel="stylesheet"
+/>
 </head>
 <body>
 <header>
     <nav>
         <ul>
-            <li><a href="homepage.html">homepage</a></li>
-            <li><a href="aboutus.html">aboutus</a></li>
-            <li><a href="contact.html">contact</a></li>
-            <li><a href="inquries.html">inquries</a></li>
-            <li><a href="services.html">services</a></li>
+            <li><a href="index.html">index</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="inquiries.html">Inquiries</a></li>
+            <li><a href="services.html">Services</a></li> 
+            <li><a href="Submit.html">submit</a></li>
         </ul>
     </nav>
 </header>
-    <h1>Contact Us</h1>
 
-    <h2>Our Address</h2>
-    <p>123 Main Street<br>
-    botshabelo, ST 12345<br>
-    Country</p>
+<h1>Contact Us</h1>
 
-    <h2>Phone</h2>
-    <p>+27 (051) 456-7890</p>
+<h2>Our Address</h2>
+<p>123 Main Street<br>
+Botshabelo, ST 12345<br>
+Country</p>
 
-    <h2>Email</h2>
-    <p><a href="Bambu:mbamu@gmail.com">bambu@gmail.com</a></p>/>
-    <h2>social media</h2>
-    <p>contact with us</p>
-    <a href="https:/wa.me/your whatsappnumber">whatsapp</a>|
-    <a href="https://www.facebook.com/your facebook">facebook</a>|
-    <a href="https://www.instagram.com/your instagram">Instagram</a>
+<h2>Phone</h2>
+<p>+27 (051) 456-7890</p>
+
+<h2>Email</h2>
+<p><a href="mailto:bambu@gmail.com">bambu@gmail.com</a></p>
+
+<h2>Social Media</h2>
+<p>Contact us on:</p>
+<a href="https://wa.me/your_whatsapp_number">WhatsApp</a> |
+<a href="https://www.facebook.com/your_facebook">Facebook</a> |
+<a href="https://www.instagram.com/your_instagram">Instagram</a>
+
+<h2>Get in Touch</h2>
+<form action="submit_form.php" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone" name="phone">
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="4" required></textarea>
+
+    <button type="submit">Send Message</button>
+</form>
+<footer>
+    <div class="footer-content">
+        <p>&copy;Bambu Coffee Shop.All right reserved.</p>
+</footer>
+
 </body>
 </html>

@@ -4,56 +4,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bamboo Coffee Shop inquries</title>
+    <link rel="stylesheet" href="Style.CSS">
+    <link rel="stylesheet" href="javascript.js">
 
-</head>
 <body>
     <nav>
         <ul>
-            <li><a href="homepage.html">homepage</a></li> 
+            <li><a href="index.html">index</a></li> 
             <li><a href="aboutus.html">aboutus></a></li>
             <li><a href="contact.html">contact></a></li>
             <il><a href="inquries.html">inquries></a></il>
             <li><a href="services.html">Services></a></li>
+            <li><a href="Submit.html">submit</a></li>
         </ul>
     </nav>
-<h1>Bamboo Coffee Shop </h1>
-<div class="inquries">
-    <div class="product">
-        <img src="pictures/GJDmKr3_TS3Qpm6KEL9UKUQKUO4.jpg"width="350"
-        <h3>latte</h3>
-        <div class="price">R42.50</div>
-        <div class="rating">★★★★☆</div>
-        <button class="add-to-bag">Add to Bag</button>
+    <script>
+    function showPopup() {
+        alert("Thank you for your order! We will process it shortly.");
+    }
+</script>
+    
+    <h1>Bamboo Coffee Shop</h1>
+    
+    <div class="inquiries">
+        <div class="product">
+            <img src="pictures/GJDmKr3_TS3Qpm6KEL9UKUQKUO4.jpg" width="350" alt="Latte" />
+            <h3>Latte</h3>
+            <div class="price">R42.50</div>
+            <div class="rating">★★★★☆</div>
+            <button type="button">Add to Bag</button>
+        </div>
+        
+        <div class="product">
+            <img src="pictures/special drink.jpg" width="350" alt="Special Drinks" />
+            <h3>Special Drinks</h3>
+            <div class="price">$4.50</div>
+            <div class="rating">★★★★★</div>
+            <button type="button">Add to Bag</button>
+        </div>
+        
+        <div class="product">
+            <img src="pictures/jir93cii.png" width="350" alt="Espresso" />
+            <h3>Espresso</h3>
+            <div class="price">R52.50</div>
+            <div class="rating">★★★★☆</div>
+            <button type="button">Add to Bag</button>
+        </div>
+        
+        <div class="product">
+            <img src="pictures/cappuccino1.webp" width="350" alt="Cappuccino" />
+            <h3>Cappuccino</h3>
+            <div class="price">$4.75</div>
+            <div class="rating">★★★★★</div>
+            <button type="button">Add to Bag</button>
+        </div>
+        
+        <div class="product">
+            <img src="pictures/l-intro-1670602155.jpg" width="350" alt="Bambu Sneak" />
+            <h3>Bambu Sneak</h3>
+            <div class="price">$5.50</div>
+            <div class="rating">★★★★☆</div>
+            <button type="button">Add to Bag</button>
+        </div>
     </div>
-    <div class="product">
-        <img src="pictures/special drink.jpg" width="350">
-        <h3>special drinks</h3>
-        <div class="price">$4.50</div>
-        <div class="rating">★★★★★</div>
-        <button class="add-to-bag">Add to Bag</button>
-    </div>
-    <div class="product">
-        <img src="pictures/jir93cii.png" width="350">
-        <h3> Espresso</h3>
-        <div class="price">R52.50</div>
-        <div class="rating">★★★★☆</div>
-        <button class="add-to-bag">Add to Bag</button>
-    </div>
-    <div class="product">
-        <img src="pictures/cappuccino1.webp" width="350">
-        <h3>cappuccino</h3>
-        <div class="price">$4.75</div>
-        <div class="rating">★★★★★</div>
-        <button class="add-to-bag">Add to Bag</button>
-    </div>
-    <div class="product">
-        <img src="pictures/l-intro-1670602155.jpg" width="350">
-        <h3>Bambu sneak</h3>
-        <div class="price">$5.50</div>
-        <div class="rating">★★★★☆</div>
-        <button class="add-to-bag">Add to Bag</button>
-    </div>
-</div>
-
-</body>
-</html>
+    
+    <hr />
+    
+    <h2>Order Form</h2>
+    <form id="orderForm" action="#" method="post" novalidate>
+        <p>
+            <label for="product">Select Product:</label><br />
+            <select id="product" name="product" required>
+                <option value="">-- Please choose an option --</option>
+                <option value="latte">Latte</option>
+                <option value="special_drinks">Special Drinks</option>
+                <option value="espresso">Espresso</option>
+                <option value="cappuccino">Cappuccino</option>
+                <option value="bambu_sneak">Bambu Sneak</option>
+            </select>
+        </p>
+    
+        <p>
+            <label for="quantity">Quantity:</label><br />
+            <input type="number" id="quantity" name="quantity" min="1" value="1" required />
+        </p>
+    
+        <p>
+            <label for="name">Name:</label><br />
+            <input type="text" id="name" name="name" placeholder="Your full name" required />
+        </p>
+    
+        <p>
+            <label for="email">Email:</label><br />
+            <input type="email" id="email" name="email" placeholder="you@example.com" required />
+        </p>
+    
+        <p>
+            <label for="phone">Phone:</label><br />
+            <input type="tel" id="phone" name="phone" placeholder="+1234567890" />
+        </p>
+    
+        <p>
+            <label for="message">Additional Requests / Notes:</label><br />
+            <textarea id="message" name="message" rows="4" placeholder="Write any special instructions here..."></textarea>
+        </p>
+    
+        <p>
+            <button type="submit">Submit Order</button>
+        </p>
+    
+    </body>
+    </html>
+    
+    
+    
+    
