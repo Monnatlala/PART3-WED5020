@@ -147,4 +147,17 @@ button[type="submit"]:focus {
   form {
       max-width: 100%; /* Allow form to take full width on small screens */
   }
+}tyle>
+/* Style for the confirmation message */
+#confirmation {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 30%; /* Position the message in the center vertically */
+    left: 50%; /* Position the message in the center horizontally */
+    transform: translate(-50%, -50%); /* Offset to truly center the popup */
+    background-color: #e0ffe0; /* Light green background for the confirmation */
+    padding: 20px;
+    border: 2px solid green; /* Border color to match the background */
+    border-radius: 10px; /* Rounded corners */
+    z-index: 1000; /* Make sure it's on top of other content */
 }

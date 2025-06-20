@@ -6,7 +6,7 @@
     <!-- Responsive design for mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Title of the webpage -->
-    <title>Homepage</title>
+    <title>contact</title>
     <!-- Link to the external CSS stylesheet -->
     <link rel="stylesheet" href="Style.CSS">
     <!-- Link to the external JavaScript file (should be included in a <script> tag) -->
@@ -40,7 +40,29 @@
     Country</p>
     https://maps.app.goo.gl/1A3eEvw2QK2iXkTCA
     <img src="Capture.PNG" width="400">
-    
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Contact Bambu</title>
+        <style>
+            /* Style for the confirmation message */
+            #confirmation {
+                display: none; /* Initially hidden */
+                position: fixed;
+                top: 30%; /* Position the message in the center vertically */
+                left: 50%; /* Position the message in the center horizontally */
+                transform: translate(-50%, -50%); /* Offset to truly center the popup */
+                background-color: #ffe0f730; /* Light green background for the confirmation */
+                padding: 20px;
+                border: 2px solid green; /* Border color to match the background */
+                border-radius: 10px; /* Rounded corners */
+                z-index: 1000; /* Make sure it's on top of other content */
+            }
+        </style>
+    </head>
+    <body>
     
         <h2>Phone</h2>
         <p>+27 (051) 456-7890</p>
@@ -50,30 +72,42 @@
     
         <h2>Social Media</h2>
         <p>Contact us on:</p>
+        <!-- Links to social media accounts -->
         <a href="https://wa.me/your_whatsapp_number">WhatsApp</a> |
         <a href="https://www.facebook.com/your_facebook">Facebook</a> |
         <a href="https://www.instagram.com/your_instagram">Instagram</a>
     
         <h2>Get in Touch</h2>
-        <form action="submit_form.php" method="POST">
+        <!-- Contact form with an action to send data -->
+        <form action="submit_form.php" method="POST" 
+              onsubmit="document.getElementById('confirmation').style.display='block'; return false;">
+            <!-- Input for name -->
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
     
+            <!-- Input for email -->
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
     
+            <!-- Input for phone number (optional) -->
             <label for="phone">Phone:</label>
             <input type="tel" id="phone" name="phone">
     
+            <!-- Textarea for the message -->
             <label for="message">Message:</label>
             <textarea id="message" name="message" rows="4" required></textarea>
     
+            <!-- Submit button for the form -->
             <button type="submit">Send Message</button>
         </form>
     
+        <!-- Confirmation Message -->
+        <!-- This message will be displayed once the form is submitted -->
+        <div id="confirmation">Message sent successfully!</div>
     
         <footer>
             <div class="footer-content">
+                <!-- Footer text with a copyright notice -->
                 <p>&copy; Bambu Coffee Shop. All rights reserved.</p>
             </div>
         </footer>
