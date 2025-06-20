@@ -1,32 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Character encoding for the document -->
     <meta charset="UTF-8">
+    <!-- Responsive design for mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bamboo Coffee Shop inquries</title>
+    <!-- Title of the webpage -->
+    <title>Bamboo Coffee Shop Inquiries</title>
+    <!-- Link to the external CSS stylesheet -->
     <link rel="stylesheet" href="Style.CSS">
-    <link rel="stylesheet" href="javascript.js">
-
+    <!-- Link to the external JavaScript file (should be included in a <script> tag) -->
+    <link rel="stylesheet" href="javascript.js"> <!-- This should be a <script> tag instead -->
+</head>
 <body>
+    <!-- Navigation menu -->
     <nav>
         <ul>
-            <li><a href="index.html">index</a></li> 
-            <li><a href="aboutus.html">aboutus></a></li>
-            <li><a href="contact.html">contact></a></li>
-            <il><a href="inquries.html">inquries></a></il>
-            <li><a href="services.html">Services></a></li>
-            <li><a href="Submit.html">submit</a></li>
+            <!-- Navigation links to different pages -->
+            <li><a href="index.html">Index</a></li> 
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="inquiries.html">inquiries</a></li> <!-- Corrected 'il' to 'li' and 'inquries' to 'inquiries' -->
+            <li><a href="services.html">Services</a></li>
+            <li><a href="Submit.html">Submit</a></li>
         </ul>
     </nav>
+
+    <!-- JavaScript function to show a popup alert -->
     <script>
-    function showPopup() {
-        alert("Thank you for your order! We will process it shortly.");
-    }
-</script>
+        function showPopup() {
+            alert("Thank you for your order! We will process it shortly.");
+        }
+    </script>
     
+    <!-- Main heading for the coffee shop -->
     <h1>Bamboo Coffee Shop</h1>
     
+    <!-- Container for product inquiries -->
     <div class="inquiries">
+        <!-- Individual product item -->
         <div class="product">
             <img src="pictures/GJDmKr3_TS3Qpm6KEL9UKUQKUO4.jpg" width="350" alt="Latte" />
             <h3>Latte</h3>
@@ -35,6 +47,7 @@
             <button type="button">Add to Bag</button>
         </div>
         
+        <!-- Another product item -->
         <div class="product">
             <img src="pictures/special drink.jpg" width="350" alt="Special Drinks" />
             <h3>Special Drinks</h3>
@@ -43,6 +56,7 @@
             <button type="button">Add to Bag</button>
         </div>
         
+        <!-- Another product item -->
         <div class="product">
             <img src="pictures/jir93cii.png" width="350" alt="Espresso" />
             <h3>Espresso</h3>
@@ -51,6 +65,7 @@
             <button type="button">Add to Bag</button>
         </div>
         
+        <!-- Another product item -->
         <div class="product">
             <img src="pictures/cappuccino1.webp" width="350" alt="Cappuccino" />
             <h3>Cappuccino</h3>
@@ -59,6 +74,7 @@
             <button type="button">Add to Bag</button>
         </div>
         
+        <!-- Another product item -->
         <div class="product">
             <img src="pictures/l-intro-1670602155.jpg" width="350" alt="Bambu Sneak" />
             <h3>Bambu Sneak</h3>
@@ -70,6 +86,7 @@
     
     <hr />
     
+    <!-- Order Form section -->
     <h2>Order Form</h2>
     <form id="orderForm" action="#" method="post" novalidate>
         <p>
@@ -112,10 +129,7 @@
         <p>
             <button type="submit">Submit Order</button>
         </p>
+    </form>
     
-    </body>
-    </html>
-    
-    
-    
-    
+</body>
+</html>

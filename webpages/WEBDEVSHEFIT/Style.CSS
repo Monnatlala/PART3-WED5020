@@ -1,153 +1,150 @@
-
 /* Reset and base styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  
-  body {
-    background: linear-gradient(135deg, #7b2ff7, #f107a3); /* purple to pink gradient */
-    color: #fff;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  header {
-    background-color: rgba(75, 0, 130, 0.85); /* deep purple */
-    padding: 1rem 2rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-  }
-  
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Set a default font family */
+}
+
+body {
+  background: linear-gradient(135deg, #7b2ff7, #f107a3); /* Purple to pink gradient background */
+  color: #fff; /* Default text color */
+  min-height: 100vh; /* Ensure body takes at least full viewport height */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack children vertically */
+}
+
+header {
+  background-color: rgba(75, 0, 130, 0.85); /* Deep purple background for header */
+  padding: 1rem 2rem; /* Padding around header content */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3); /* Shadow effect for depth */
+}
+
+nav {
+  max-width: 1000px; /* Maximum width for navigation */
+  margin: 0 auto; /* Center navigation */
+  display: flex; /* Use flexbox for navigation items */
+  justify-content: center; /* Center items horizontally */
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  gap: 1.2rem; /* Space between navigation items */
+}
+
+nav a {
+  color: #f9c1e7; /* Light pink color for links */
+  text-decoration: none; /* Remove underline from links */
+  font-weight: 600; /* Bold font weight */
+  font-size: 1rem; /* Font size for links */
+  padding: 0.5rem 1rem; /* Padding around links */
+  border-radius: 25px; /* Rounded corners for links */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: #f107a3; /* Background color on hover/focus */
+  color: #fff; /* Text color on hover/focus */
+  outline: none; /* Remove outline on focus */
+}
+
+main {
+  flex-grow: 1; /* Allow main content to grow and fill available space */
+  max-width: 900px; /* Maximum width for main content */
+  margin: 2rem auto; /* Center main content with margin */
+  background-color: rgba(255, 255, 255, 0.1); /* Light background for main content */
+  border-radius: 12px; /* Rounded corners for main content */
+  padding: 2rem; /* Padding inside main content */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* Shadow effect for depth */
+}
+
+h1, h2, h3 {
+  margin-bottom: 1rem; /* Space below headings */
+  color: #fff; /* White color for headings */
+  text-align: left; /* Align headings to the left */
+}
+
+p {
+  line-height: 1.5; /* Line height for better readability */
+  color: #eee; /* Light gray color for paragraph text */
+  margin-bottom: 1.2rem; /* Space below paragraphs */
+}
+
+footer {
+  background-color: rgba(75, 0, 130, 0.85); /* Deep purple background for footer */
+  color: #f9c1e7; /* Light pink color for footer text */
+  text-align: center; /* Center text in footer */
+  padding: 1rem 0; /* Padding inside footer */
+  font-size: 0.9rem; /* Font size for footer text */
+  margin-top: auto; /* Push footer to the bottom */
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.3); /* Shadow effect for depth */
+}
+
+/* Forms styling */
+form {
+  display: flex; /* Use flexbox for form layout */
+  flex-direction: column; /* Stack form elements vertically */
+  gap: 1rem; /* Space between form elements */
+  max-width: 500px; /* Maximum width for forms */
+  margin: 1rem auto; /* Center form with margin */
+}
+
+label {
+  font-weight: 600; /* Bold font weight for labels */
+  margin-bottom: 0.3rem; /* Space below labels */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+  padding: 0.6rem 1rem; /* Padding inside input fields */
+  border-radius: 8px; /* Rounded corners for input fields */
+  border: none; /* Remove default border */
+  font-size: 1rem; /* Font size for input fields */
+  outline: none; /* Remove outline on focus */
+  font-family: inherit; /* Inherit font family from body */
+}
+
+textarea {
+  resize: vertical; /* Allow vertical resizing of textarea */
+  min-height: 100px; /* Minimum height for textarea */
+}
+
+button[type="submit"] {
+  background-color: #f107a3; /* Background color for submit button */
+  color: #fff; /* Text color for submit button */
+  border: none; /* Remove default border */
+  padding: 0.8rem 1.5rem; /* Padding inside submit button */
+  font-size: 1.1rem; /* Font size for submit button */
+  font-weight: 700; /* Bold font weight for submit button */
+  border-radius: 30px; /* Rounded corners for submit button */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effects */
+  align-self: center; /* Center button horizontally */
+  width: fit-content; /* Button width based on content */
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+  background-color: #7b2ff7; /* Background color on hover/focus */
+  outline: none; /* Remove outline on focus */
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
   nav {
-    max-width: 1000px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1.2rem;
+      justify-content: center; /* Center navigation items on small screens */
+      gap: 0.6rem; /* Reduce gap between navigation items */
   }
-  
   nav a {
-    color: #f9c1e7; /* light pink */
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
-    border-radius: 25px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+      padding: 0.4rem 0.8rem; /* Reduce padding for navigation links */
+      font-size: 0.9rem; /* Reduce font size for navigation links */
   }
-  
-  nav a:hover,
-  nav a:focus {
-    background-color: #f107a3;
-    color: #fff;
-    outline: none;
-  }
-  
   main {
-    flex-grow: 1;
-    max-width: 900px;
-    margin: 2rem auto;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    padding: 2rem;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      margin: 1rem; /* Reduce margin for main content on small screens */
+      padding: 1.2rem; /* Reduce padding for main content on small screens */
   }
-  
-  h1, h2, h3 {
-    margin-bottom: 1rem;
-    color: #fff;
-    text-align: left;
-  }
-  
-  p {
-    line-height: 1.5;
-    color: #eee;
-    margin-bottom: 1.2rem;
-  }
-  
-  footer {
-    background-color: rgba(75, 0, 130, 0.85);
-    color: #f9c1e7;
-    text-align: center;
-    padding: 1rem 0;
-    font-size: 0.9rem;
-    margin-top: auto;
-    box-shadow: 0 -2px 8px rgba(0,0,0,0.3);
-  }
-  
-  /* Forms styling */
   form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    max-width: 500px;
-    margin: 1rem auto;
+      max-width: 100%; /* Allow form to take full width on small screens */
   }
-  
-  label {
-    font-weight: 600;
-    margin-bottom: 0.3rem;
-  }
-  
-  input[type="text"],
-  input[type="email"],
-  input[type="tel"],
-  textarea,
-  select {
-    padding: 0.6rem 1rem;
-    border-radius: 8px;
-    border: none;
-    font-size: 1rem;
-    outline: none;
-    font-family: inherit;
-  }
-  
-  textarea {
-    resize: vertical;
-    min-height: 100px;
-  }
-  
-  button[type="submit"] {
-    background-color: #f107a3;
-    color: #fff;
-    border: none;
-    padding: 0.8rem 1.5rem;
-    font-size: 1.1rem;
-    font-weight: 700;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    align-self: center;
-    width: fit-content;
-  }
-  
-  button[type="submit"]:hover,
-  button[type="submit"]:focus {
-    background-color: #7b2ff7;
-    outline: none;
-  }
-  
-  /* Responsive */
-  @media (max-width: 600px) {
-    nav {
-      justify-content: center;
-      gap: 0.6rem;
-    }
-    nav a {
-      padding: 0.4rem 0.8rem;
-      font-size: 0.9rem;
-    }
-    main {
-      margin: 1rem;
-      padding: 1.2rem;
-    }
-    form {
-      max-width: 100%;
-    }
-  }
-  
- 
+}
